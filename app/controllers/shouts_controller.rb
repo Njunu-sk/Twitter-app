@@ -5,7 +5,7 @@ class ShoutsController < ApplicationController
 
   def create
     shout = current_user.shouts.create(shout_params)
-    redirect_to dashboard_path, redirect_options_for(shout)
+    redirect_to root_path, redirect_options_for(shout)
   end
 
   private

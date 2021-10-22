@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   constraints Clearance::Constraints::SignedIn.new do
-    get 'dashboard/show' => 'dashboard#show', as: :dashboard
+    root to: 'dashboard#show', as: :signed_in_root
   end
 
   root to: 'homes#show'
