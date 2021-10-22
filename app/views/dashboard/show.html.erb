@@ -1,0 +1,10 @@
+<h1>Shouter</h1>
+
+<%= shout_form_for(TextShout) do |form| %>
+  <%= form.text_field :body, placeholder: 'shout here!', required: true %>
+<% end %>
+
+<%= shout_form_for(PhotoShout) do |form| %>
+  <%= form.file_field :image, required: true %>
+<% end %>
+<%= render @dashboard.timeline %>
